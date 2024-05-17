@@ -1,7 +1,22 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesByAttribute]
-@="Sort Files by Attribute"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesByExtension]
+@="Sort Files by Extension"
+"Icon"="powershell.exe"
 
-[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesByAttribute\command]
-@="powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File \"C:\Scripts\SortFilesByAttribute.ps1\" \"%V\""
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesByExtension\command]
+@="powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File \"C:\\Scripts\\SortFilesByAttribute.ps1\" -Path \"%V\" -SortBy extension"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesByCreationDate]
+@="Sort Files by Creation Date"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesByCreationDate\command]
+@="powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File \"C:\\Scripts\\SortFilesByAttribute.ps1\" -Path \"%V\" -SortBy creationdate"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesBySize]
+@="Sort Files by Size"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SortFilesBySize\command]
+@="powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File \"C:\\Scripts\\SortFilesByAttribute.ps1\" -Path \"%V\" -SortBy size"
